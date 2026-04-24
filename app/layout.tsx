@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import DeviceWarningOverlay from "@/components/DeviceWarningOverlay";
+import PageTransition from "@/components/PageTransition";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -91,6 +92,7 @@ export default function RootLayout({
       </head>
       <body suppressHydrationWarning className="relative min-h-screen bg-[#faf9f6] text-[#1c1c1c] overflow-x-hidden font-body antialiased">
         <DeviceWarningOverlay />
+        <PageTransition />
         {children}
       </body>
     </html>
